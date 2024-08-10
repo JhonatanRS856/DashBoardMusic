@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashBord Music</title>
+    <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="./input.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body class="lg:p-[15px] bg-black">
+    <div class="dashboard grid grid-cols-1  lg:grid-cols-[120px_1fr] justify-items-center gap-0 md:border md:rounded-[22px] max-w-[1572px] mx-auto">
+        <div class="w-full flex items-center justify-between px-4 py-3 lg:flex-col lg:border-r lg:py-4 lg:px-2">
+            <div class="flex items-center justify-center gap-2 lg:flex-col lg:text-center">
+                <div class="w-12 h-12 md:w-14 md:h-14 lg:w-12 lg:h-12">
+                    <img src="../img/AboutMe.jpg" alt="" class="img-cover rounded-full">
+                </div>
+                <span class="font-medium text-white text-xl md:text-2xl lg:text-xl">Jhonatan RS</span>
+            </div>
+            <div class="lg:hidden">
+                <button class="p-1 border rounded-md border-borde-white text-white cursor-pointer" id="btnAbrir">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                        class="bi bi-list md:w-9 md:h-9" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                    </svg>
+                </button>
+            </div>
+            <div class="flex flex-col flex-grow items-center opacity-0  text-white fixed top-0 h-[100vh] right-[-100%] z-50 btns-nav px-5 py-3 bg-[rgb(15,15,15,.7)] backdrop-blur-lg lg:flex lg:relative lg:right-0 lg:top-0 lg:w-full lg:h-auto lg:px-0 lg:bg-transparent lg:backdrop-blur-none lg:opacity-100 navegacion" id="navContainer">
+                <div class="flex justify-between mt-3 mb-6 lg:hidden w-[100%]">
+                    <span class="font-semibold text-xl">Navegación</span>
+                    <svg id="closeIcon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                    </svg>
+                </div>
+                <div class="flex flex-col gap-3">
+                    <button class="relative group">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z"/>
+                        </svg>
+                        <span class="lg:opacity-0 group-hover:opacity-100 z-10 lg:absolute duration-300 lg:right-[-150%] lg:top-[50%] lg:translate-y-[-50%] lg:translate-x-[57%] lg:bg-[#1f1f1fdf] lg:backdrop-blur-md lg:px-3 lg:py-r lg:rounded-md">Reproducciones</span>
+                    </button>
+                    <button class="relative group">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-music-note-list" viewBox="0 0 16 16">
+                            <path d="M12 13c0 1.105-1.12 2-2.5 2S7 14.105 7 13s1.12-2 2.5-2 2.5.895 2.5 2"/>
+                            <path fill-rule="evenodd" d="M12 3v10h-1V3z"/>
+                            <path d="M11 2.82a1 1 0 0 1 .804-.98l3-.6A1 1 0 0 1 16 2.22V4l-5 1z"/>
+                            <path fill-rule="evenodd" d="M0 11.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5m0-4A.5.5 0 0 1 .5 7H8a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5m0-4A.5.5 0 0 1 .5 3H8a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5"/>
+                        </svg>
+                        <span class="lg:opacity-0 group-hover:opacity-100 z-10 lg:absolute duration-300 lg:right-[-150%] lg:top-[50%] lg:translate-y-[-50%] lg:translate-x-[57%] lg:bg-[#1f1f1fdf] lg:backdrop-blur-md lg:px-3 lg:py-r lg:rounded-md">Listas</span>
+                    </button>
+                    <button class="relative group">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                            <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+                            <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
+                        </svg>
+                        <span class="lg:opacity-0 group-hover:opacity-100 z-10 lg:absolute duration-300 lg:right-[-150%] lg:top-[50%] lg:translate-y-[-50%] lg:translate-x-[50%] lg:bg-[#1f1f1fdf] lg:backdrop-blur-md lg:px-3 lg:py-r lg:rounded-md">Descargas</span>
+                    </button>
+                    <button class="relative group">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-right-dots-fill" viewBox="0 0 16 16">
+                            <path d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m3 1a1 1 0 1 1 0-2 1 1 0 0 1 0 2"/>
+                        </svg>
+                        <span class="lg:opacity-0 group-hover:opacity-100 z-10 lg:absolute duration-300 lg:right-[-150%] lg:top-[50%] lg:translate-y-[-50%] lg:translate-x-[42%] lg:bg-[#1f1f1fdf] lg:backdrop-blur-md lg:px-3 lg:py-r lg:rounded-md">Mensajes</span>
+                    </button>
+                    <button class="relative group">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                        </svg>
+                        <span class="lg:opacity-0 group-hover:opacity-100 z-10 lg:absolute duration-300 lg:right-[-150%] lg:top-[50%] lg:translate-y-[-50%] lg:translate-x-[39%] lg:bg-[#1f1f1fdf] lg:backdrop-blur-md lg:px-3 lg:py-r lg:rounded-md">Favoritos</span>
+                    </button>  
+                </div>
+                <div class="flex flex-col gap-3 w-[100%] flex-grow justify-end lg:mt-0 lg:w-auto">
+                    <button class="relative group">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                        </svg>
+                        <span class="lg:opacity-0 group-hover:opacity-100 z-10 lg:absolute duration-300 lg:right-[-150%] lg:top-[50%] lg:translate-y-[-50%] lg:bg-[#1f1f1fdf] lg:backdrop-blur-md lg:px-3 lg:py-r lg:rounded-md">Perfil</span>
+                    </button>
+                    <button class="relative group">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
+                            <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
+                        </svg>
+                        <span class="lg:opacity-0 group-hover:opacity-100 z-10 lg:absolute duration-300 lg:right-[-150%] lg:top-[50%] lg:translate-y-[-50%] lg:translate-x-[57%] lg:bg-[#1f1f1fdf] lg:backdrop-blur-md lg:px-3 lg:py-r lg:rounded-md">Configuración</span>
+                    </button>
+                    <button class="relative group">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-door-open" viewBox="0 0 16 16">
+                            <path d="M8.5 10c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1"/>
+                            <path d="M10.828.122A.5.5 0 0 1 11 .5V1h.5A1.5 1.5 0 0 1 13 2.5V15h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V1.5a.5.5 0 0 1 .43-.495l7-1a.5.5 0 0 1 .398.117M11.5 2H11v13h1V2.5a.5.5 0 0 0-.5-.5M4 1.934V15h6V1.077z"/>
+                        </svg>
+                        <span class="lg:opacity-0 group-hover:opacity-100 z-10 lg:absolute duration-300 lg:right-[-150%] lg:top-[50%] lg:translate-y-[-50%] lg:bg-[#1f1f1fdf] lg:backdrop-blur-md lg:px-3 lg:py-r lg:rounded-md">Salir</span>
+                    </button> 
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-col w-[100%] px-2 min-[1100px]:flex-row max-w-[1446px]">
+            <div class="flex flex-col flex-grow py-4 px-2 md:px-5 overflow-hidden lg:max-w-[620px]">
+                <div class="mb-3">
+                    <h2 class="text-2xl text-white font-medium">Popular Playlist</h2>
+                </div>
+                <div class="carrusel w-full my-4 flex justify-start h-[280px] relative overflow-hidden">
+                    <div class="slider-container swiper overflow-hidden rounded-[25px]  items-center py-6 sm:max-w-[660px] md:max-w-[620px]">
+                        <div class="swiper-wrapper rounded-[25px] ">
+                            <div class="card-slide relative swiper-slide">
+                                <img src="../img/saygoodbye.jpg" alt="" class="rounded-[25px] w-full hover:scale-105 duration-300">
+                                <div class="flex flex-col p-4 py-5 absolute bottom-0 left-0">
+                                    <h1 class="text-white text-4xl mb-5">Say Goodbye</h1>
+        
+                                    <button
+                                        class="px-3 py-2 text-white border rounded-md border-borde-white bg-[rgb(245,245,245,.3)] backdrop-blur-sm w-fit text-center text-xl hover:scale-105 hover:bg-[rgb(245,245,245,.4)] duration-300">
+                                        Escuchar <i class="bi bi-play-circle-fill"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-slide relative swiper-slide">
+                                <img src="../img/monsters.jpg" alt="" class="rounded-[25px] w-full hover:scale-105 duration-300">
+                                <div class="flex flex-col p-4 py-5 absolute bottom-0 left-0">
+                                    <h1 class="text-white text-4xl mb-5">Monsters</h1>
+        
+                                    <button
+                                        class="px-3 py-2 text-white border rounded-md border-borde-white bg-[rgb(245,245,245,.2)] backdrop-blur-sm w-fit text-center text-xl hover:scale-105 hover:bg-[rgb(245,245,245,.4)] duration-300">
+                                        Escuchar <i class="bi bi-play-circle-fill"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                
+                <div class="mt-10 mb-4">
+                    <h2 class="text-2xl text-white font-medium">Artistas</h2>
+                </div>
+                <div class="w-[100%] mt-3">
+                    <div class="flex gap-5 w-full overflow-x-auto pb-7 slider-customize">
+                        <div class="artista-box">
+                            <div class="img-content-slider rounded-full">
+                                <img src="../img/artist/porter-robinson.jpg" alt="" class="img-cover transition-img">
+                            </div>
+    
+                            <span class="text-white text-xl">Porter Robinson</span>
+                        </div>
+                        <div class="artista-box">
+                            <div class="img-content-slider rounded-full">
+                                <img src="../img/artist/blackbear.jpg" alt="" class="img-cover transition-img">
+                            </div>
+    
+                            <span class="text-white text-xl">blackbear</span>
+                        </div>
+                        <div class="artista-box">
+                            <div class="img-content-slider rounded-full">
+                                <img src="../img/artist/linkinpark.jpg" alt="" class="img-cover transition-img">
+                            </div>
+    
+                            <span class="text-white text-xl">Linkin Park</span>
+                        </div>
+                        <div class="artista-box">
+                            <div class="img-content-slider rounded-full">
+                                <img src="../img/artist/NOA.jpg" alt="" class="img-cover transition-img">
+                            </div>
+    
+                            <span class="text-white text-xl">NOA</span>
+                        </div>
+                        <div class="artista-box">
+                            <div class="img-content-slider rounded-full">
+                                <img src="../img/artist/theneighbourhood.jpg" alt="" class="img-cover transition-img">
+                            </div>
+    
+                            <span class="text-white text-xl">The Neighbourhood</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-10 mb-4">
+                    <h2 class="text-2xl text-white font-medium">Álbumes Recomendados</h2>
+                </div>
+                <div class="w-[100%] mt-3">
+                    <div class="flex gap-5 w-full overflow-x-auto pb-7 slider-customize">
+                        <div class="album-box group">
+                            <div class="img-content-slider rounded-xl">
+                                <img src="../img/albums/cradles.png" alt="" class="img-cover transition-img">
+                                <div class="playAlbum group-hover:translate-y-0 group-hover:opacity-100">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-play-fill translate-x-[1px]" viewBox="0 0 16 16">
+                                        <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <span class="text-text-color">Sub Urban</span>
+                                <h2 class="font-medium text-white text-xl">Cradles</h2> 
+                            </div>
+                        </div>
+                        <div class="album-box group">
+                            <div class="img-content-slider rounded-xl">
+                                <img src="../img/albums/baddest.png" alt="" class="img-cover transition-img">
+                                <div class="playAlbum group-hover:translate-y-0 group-hover:opacity-100">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-play-fill translate-x-[1px]" viewBox="0 0 16 16">
+                                        <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/>
+                                    </svg>
+                                </div>
+                            </div>
+    
+                            <div>
+                                <span class="text-text-color">Cher Lloyd</span>
+                                <h2 class="font-medium text-white text-xl">Baddest</h2> 
+                            </div>
+                        </div>
+                        <div class="album-box group">
+                            <div class="img-content-slider rounded-xl">
+                                <img src="../img/albums/Bloom.png" alt="" class="img-cover transition-img">
+                                <div class="playAlbum group-hover:translate-y-0 group-hover:opacity-100">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-play-fill translate-x-[1px]" viewBox="0 0 16 16">
+                                        <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/>
+                                    </svg>
+                                </div>
+                            </div>
+    
+                            <div>
+                                <span class="text-text-color">Red Velvet</span>
+                                <h2 class="font-medium text-white text-xl">Bloom</h2> 
+                            </div>
+                        </div>
+                        <div class="album-box group">
+                            <div class="img-content-slider rounded-xl">
+                                <img src="../img/albums/daises.png" alt="" class="img-cover transition-img">
+                                <div class="playAlbum group-hover:translate-y-0 group-hover:opacity-100">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-play-fill translate-x-[1px]" viewBox="0 0 16 16">
+                                        <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/>
+                                    </svg>
+                                </div>
+                            </div>
+    
+                            <div>
+                                <span class="text-text-color">Katy Perry</span>
+                                <h2 class="font-medium text-white text-xl">Daises</h2> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class=" flex flex-col overflow-hidden  py-4 px-2 md:px-5 lg:border-l lg:flex-grow xl:max-w-[820px]">
+                <div class="">
+                    <h2 class="text-2xl text-white font-medium">Canciones Recomendadas</h2>
+                </div>
+                <div class="w-full my-3" >
+                    <ul class="lista-songs" id="containerSongs">
+                        
+                    </ul>
+                </div>
+                <div class="w-[100%] flex  items-center mt-10 flex-col max-w-[560px] mx-auto">
+                    <audio src="../music/monsters.mp3" id="audioPlayer"></audio>
+                    <div class=" aspect-square max-w-[250px] rounded-full overflow-hidden border-2 border-gray-600 border-opacity-75 w-[100%]" id="divGirar">
+                        <img src="../img/monsters.jpg" alt="" class="img-cover" id="imgSong">
+                    </div>
+                    <div class="my-5 text-ellipsis overflow-hidden text-center">
+                        <h1 class="name-song text-2xl text-white">Monsters</h1>
+                        <span class="artist-name text-text-color">NOA</span>
+                    </div>
+                    <div class="w-[100%] mt-5">
+                        <div class="progress-container" id="progressContainer">
+                            <div class="progrees-bar" id="progressBar">
+                            </div>
+                            <div class="thumb" id="progressThumb"></div>
+                        </div>
+                    </div>
+                    <div class="text-white w-[100%] justify-between mt-2 flex">
+                        <span class="contadorTiempo" id="currentTime">00:00</span>
+                        <span class="duracionTotal">04:11</span>
+                    </div>
+                    <div class="flex items-center mt-5 controls-reproductor w-full justify-between">
+                        <div>
+                            <button class="btnModes" id="randomBtn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shuffle" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.6 9.6 0 0 0 7.556 8a9.6 9.6 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.6 10.6 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.6 9.6 0 0 0 6.444 8a9.6 9.6 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5"/>
+                                    <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192m0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="flex gap-3 items-center">
+                            <button onclick="previousSong()" id="" class="btn-song flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-rewind-fill" viewBox="0 0 16 16">
+                                    <path d="M8.404 7.304a.802.802 0 0 0 0 1.392l6.363 3.692c.52.302 1.233-.043 1.233-.696V4.308c0-.653-.713-.998-1.233-.696z"/>
+                                    <path d="M.404 7.304a.802.802 0 0 0 0 1.392l6.363 3.692c.52.302 1.233-.043 1.233-.696V4.308c0-.653-.713-.998-1.233-.696z"/>
+                                </svg>
+                            </button>
+                            <button class="pause-button btn-song flex" id="playPauseBtn" onclick="togglePlayPause()">
+                                <svg id="playIcon" xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+                                    <path d="M11.596 8.697l-6.363 3.692A.5.5 0 0 1 4 11.992V4.008a.5.5 0 0 1 .767-.424l6.363 3.692a.5.5 0 0 1 0 .852z"/>
+                                </svg>
+                                <svg id="pauseIcon" xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-pause-fill hidden" viewBox="0 0 16 16">
+                                    <path d="M5.5 3.5A.5.5 0 0 1 6 3h1a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5H6a.5.5 0 0 1-.5-.5v-9zm4 0A.5.5 0 0 1 10 3h1a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-9z"/>
+                                </svg>
+                                <svg id="repeatIcon" xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-arrow-clockwise hidden" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z"/>
+                                    <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466"/>
+                                </svg>
+                            </button>
+                            <button class="btn-song flex" onclick="nextSong()">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-fast-forward-fill" viewBox="0 0 16 16">
+                                    <path d="M7.596 7.304a.802.802 0 0 1 0 1.392l-6.363 3.692C.713 12.69 0 12.345 0 11.692V4.308c0-.653.713-.998 1.233-.696z"/>
+                                    <path d="M15.596 7.304a.802.802 0 0 1 0 1.392l-6.363 3.692C8.713 12.69 8 12.345 8 11.692V4.308c0-.653.713-.998 1.233-.696z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div>
+                            <button class="btnModes" id="repeatButton">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-repeat-1" viewBox="0 0 16 16">
+                                    <path d="M11 4v1.466a.25.25 0 0 0 .41.192l2.36-1.966a.25.25 0 0 0 0-.384l-2.36-1.966a.25.25 0 0 0-.41.192V3H5a5 5 0 0 0-4.48 7.223.5.5 0 0 0 .896-.446A4 4 0 0 1 5 4zm4.48 1.777a.5.5 0 0 0-.896.446A4 4 0 0 1 11 12H5.001v-1.466a.25.25 0 0 0-.41-.192l-2.36 1.966a.25.25 0 0 0 0 .384l2.36 1.966a.25.25 0 0 0 .41-.192V13h6a5 5 0 0 0 4.48-7.223Z"/>
+                                    <path d="M9 5.5a.5.5 0 0 0-.854-.354l-1.75 1.75a.5.5 0 1 0 .708.708L8 6.707V10.5a.5.5 0 0 0 1 0z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

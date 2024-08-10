@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.img-cover{
+    @apply w-full h-full object-cover block;
+}
+
+.artista-box{
+    @apply flex flex-col gap-4 text-center w-[130px] items-center flex-shrink-0 p-2 rounded-lg duration-300 cursor-pointer hover:bg-[rgb(245,245,245,.1)];
+}
+
+.album-box{
+    @apply  flex flex-col gap-4 text-center w-[140px] items-center flex-shrink-0 p-2 rounded-lg duration-300 cursor-pointer hover:bg-[rgb(245,245,245,.1)];
+}
+
+.img-content-slider{
+    @apply relative overflow-hidden border-2 w-full aspect-square border-borde-img border-opacity-85;
+}
+
+.playAlbum{
+    @apply absolute rounded-full p-1 text-white bg-borde-img right-[8px] bottom-[8px] bg-opacity-85 duration-300 translate-y-6 opacity-0 hover:scale-105;
+}
+
+.transition-img{
+    @apply duration-300 hover:scale-105 hover:rotate-2;
+}
+
+.song-link{
+    @apply w-full flex items-center justify-between py-[14px] px-[10px] hover:bg-[rgb(245,245,245,.1)];
+}
+
+.songs-img-c{
+    @apply aspect-square rounded-full w-14 border-2 overflow-hidden shadow-sm border-borde-img;
+}
+
+.lista-songs{
+    @apply  flex flex-col overflow-auto lg:max-h-[435px];
+}
+

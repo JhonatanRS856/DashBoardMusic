@@ -1,0 +1,230 @@
+body {
+    /* padding: 15px; */
+    font-family: 'Quicksand', sans-serif;
+    background: url('https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/8727c9b1-be21-4932-a221-4257b59a74dd');
+    background-repeat: no-repeat;
+
+    animation: slidein 120s forwards infinite alternate;
+}
+
+.dashboard {
+    background: rgb(255, 255, 255, .1);
+    backdrop-filter: blur(25px);
+    min-height: 100dvh;
+    width: 100%;
+    overflow: hidden;
+}
+
+@keyframes slidein {
+
+    0%,
+    100% {
+        background-position: 20% 0%;
+        background-size: 3400px;
+    }
+
+    50% {
+        background-position: 100% 0%;
+        background-size: 2400px;
+    }
+}
+
+.swiper{
+    min-width: 320px;
+}
+
+.swiper-wrapper{
+    width: 100%;
+}
+
+.swiper .swiper-pagination-bullet{
+    background-color: rgb(255, 255, 255);
+    opacity: 0.4;
+}
+
+.swiper .swiper-pagination-bullet-active{
+    background-color: rgba(255, 255, 255, 0.879);
+    opacity: 1;
+}
+
+
+.card-slide {
+    overflow: hidden;
+}
+
+.card-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider-customize::-webkit-scrollbar {
+    width: 9px;
+}
+
+.slider-customize::-webkit-scrollbar-track {
+    background: #e4e4e4d4;
+    border-radius: 10px;
+}
+
+.slider-customize::-webkit-scrollbar-thumb {
+    background: radial-gradient(400px at 50% 50%,#6d5e9170,#6d5e9181);
+    border-radius: 10px;
+    border: 1px solid #6d5e91b4;
+}
+
+.slider-customize::-webkit-scrollbar-thumb:hover {
+    background: #b494e098;
+}
+
+.lista-songs::-webkit-scrollbar{
+    display: none;
+}
+
+.btns-nav svg{
+    width: 27px;
+    height: 27px;
+}
+
+.btns-nav button{
+    border-radius: 12px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.btns-nav button:hover{
+    background: rgb(255, 255, 255, .2);
+}
+
+#navContainer button.active{
+    background: rgb(255, 255, 255, .2);
+}
+
+#navContainer.visible{
+    opacity: 1;
+    right: 0;
+    box-shadow: 0 0 0 100vmax rgb(0,0,0,.6);
+    transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.img-content-slider{
+    box-shadow: 0px 4px 10px #6d5e9194;
+}
+
+.progress-container{
+    position: relative;
+    width: 100%;
+    height: 12px;
+    background: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.progrees-bar{
+    height: 100%;
+    width: 0px;
+    border-radius:10px;
+    background-color: #917fbe;
+}
+
+.thumb{
+    width: 11px;
+    height: 17px;
+    position: absolute;
+    background:#917fbe;
+    top: -3px;
+    left: 0;
+    border-radius: 10px;
+    box-shadow: 0 0 2px rgb(0,0,0,.4);
+}
+
+.btn-song{
+    outline: none;
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background-color: #8173a4;
+    border: 2px solid #6d5e91b4;
+    cursor: pointer;
+    box-shadow: 1px 1px 3px rgb(0,0,0,.6);
+    transition: .3s ease-in-out;
+}
+
+.btn-song:hover{
+    scale: 1.02;
+}
+
+.btn-song svg{
+    width: 25px;
+    height: 25px;
+}
+
+.pause-button{
+    width: 75px;
+    height: 75px;
+    position: relative;
+}
+
+.pause-button #playIcon{
+    position: absolute;
+    transform: translateX(6%);
+}
+
+.pause-button svg{
+    width: 55px;
+    height: 55px;
+}
+
+.btn-song svg{
+    color: white;
+}
+
+.btnModes{
+    color: rgb(103, 103, 103);
+}
+
+.btnModes svg{
+    width: 25px;
+    height: 25px;
+}
+
+#divGirar.active{
+    animation: girar 10s linear infinite forwards;
+}
+
+@keyframes girar{
+    0%{
+        rotate: 0;
+    }
+
+    100%{
+        rotate: 360deg;
+    }
+}
+
+.title-shadow{
+    text-shadow: 1px 1px 5px rgb(0,0,0,.6);
+}
+
+.song-link{
+    transition: all .25s ease-in-out;
+}
+
+.song-link.active{
+    background: rgba(121, 117, 117, 0.4);
+}
+
+#randomBtn.shufle-btn svg{
+    color: rgb(255, 255, 255);
+}
+
+#repeatButton.shufle-btn svg{
+    color: rgb(255, 255, 255);
+}
